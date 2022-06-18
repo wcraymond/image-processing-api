@@ -1,5 +1,11 @@
-const favoriteFruits: string[] = ['apple', 'strawberry', 'orange']
+import express from 'express';
+import routes from './routes/index';
 
-function addFruit(fruit: string) {
-  favoriteFruits.push(fruit)
-}
+const app = express();
+const port = 3000;
+
+app.use('/api', routes);
+
+app.listen(port, () => {
+  console.log(`server started at localhost:${port}`);
+});

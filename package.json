@@ -4,10 +4,12 @@
   "description": "Image Processing API",
   "main": "index.js",
   "scripts": {
-    "tsc": "npx tsc",
+    "build": "npx tsc",
     "jasmine": "jasmine",
     "lint": "eslint --ignore-path .eslintignore --ext .ts .",
-    "prettier": "prettier --write \"./{src,spec}/**/*\""
+    "prettier": "prettier --write \"./{src,spec}/**/*\"",
+    "test": "npm run build && npm run jasmine",
+    "start": "nodemon src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
     "prettier": "^2.7.1",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
