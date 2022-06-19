@@ -1,11 +1,13 @@
 import express from 'express';
-import logger from '../middleware/logger';
+import resizedImage from './api/resizedImage';
 
 const routes = express.Router();
 
-routes.use(logger);
+// Add route for resizedImage
+routes.use('/resizedImage', resizedImage);
 
-routes.get('/', (req, res) => {
+// Endpoint for the main API route (not useful but testable)
+routes.get('/', (req: express.Request, res: express.Response): void => {
   res.send('Main API route');
 });
 
