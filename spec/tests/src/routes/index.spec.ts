@@ -22,6 +22,13 @@ describe('Test endpoint responses', () => {
     expect(response.status).toBe(200);
   });
 
+  it('should return status 404 when image does not exist', async () => {
+    const response = await request.get(
+      '/api/resizedImage?filename=doesNotExist&width=200&height=200'
+    );
+    expect(response.status).toBe(404);
+  });
+
   afterAll(() => {
     clearThumbDirectory();
   });
