@@ -4,7 +4,7 @@ import path from 'path';
 /* Inspired by the following StackOverflow post:
  * https://stackoverflow.com/questions/27072866/how-to-remove-all-files-from-directory-without-removing-directory-in-node-js */
 const clearThumbDirectory = (): void => {
-  const thumbdir = path.join(__dirname, '../../../assets/thumb');
+  const thumbdir = path.join(__dirname, '../../assets/thumb');
   fs.readdir(thumbdir, (err, files) => {
     if (err) {
       throw err;
