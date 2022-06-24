@@ -1,5 +1,4 @@
 import path from 'path';
-import fs from 'fs';
 import express from 'express';
 import { resize } from '../../utils/images';
 import validateQueryParams from '../../middleware/validateQueryParams';

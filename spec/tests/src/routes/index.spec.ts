@@ -16,9 +16,11 @@ describe('Test endpoint responses', () => {
   });
 
   it('should return status 200 when query is valid', async () => {
-    const response = await request.get('/api/resizedImage?filename=fjord&width=200&height=200');
+    const response = await request.get(
+      '/api/resizedImage?filename=fjord&width=200&height=200'
+    );
     expect(response.status).toBe(200);
-  })
+  });
 
   afterAll(() => {
     clearThumbDirectory();
